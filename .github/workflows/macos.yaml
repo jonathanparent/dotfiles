@@ -41,7 +41,7 @@ jobs:
           fi
           export BRANCH_NAME
 
-          URL="https://raw.githubusercontent.com/shunk031/dotfiles/${BRANCH_NAME}/setup.sh"
+          URL="https://raw.githubusercontent.com/jonathanparent/dotfiles/${BRANCH_NAME}/setup.sh"
           echo "Download setup.sh from ${URL}"
           
           printf '${EMAIL_ADDRESS}\n' | bash -c "$(curl -fsLS $URL)"
@@ -75,10 +75,10 @@ jobs:
           tool: customSmallerIsBetter
           output-file-path: result.json
           github-token: ${{ secrets.MY_DOTFILES_BENCHMARK }}
-          gh-repository: "github.com/shunk031/my-dotfiles-benchmarks"
+          gh-repository: "github.com/jonathanparent/my-dotfiles-benchmarks"
           auto-push: ${{ env.auto_push }}
           comment-on-alert: true
           fail-on-alert: true
           alert-threshold: "150%"
-          alert-comment-cc-users: "@shunk031"
+          alert-comment-cc-users: "@jonathanparent"
           benchmark-data-dir-path: "."
