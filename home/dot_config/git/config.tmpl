@@ -1,7 +1,7 @@
 [user]
-	name = Shunsuke KITADA
-	email = {{ .email | quote }}
-	signingkey = D55D775A7951407C
+    name = Jonathan Parent
+    email = {{ .email | quote }}
+    signingkey = ~/.ssh/id_ed25519_sk_github_1.pub
 
 [color]
 	ui = auto
@@ -17,11 +17,21 @@
 	root = ~/.local/share
 	root = ~/ghq
 
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+
 [commit]
-	gpgsign = true
+    gpgsign = true
+
+[tag]
+    gpgSign = true
 
 [pull]
 	rebase = false
 
 [core]
 	quotepath = false
+	editor = vim
