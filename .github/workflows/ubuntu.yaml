@@ -50,7 +50,7 @@ jobs:
           fi
           export BRANCH_NAME
 
-          URL="https://raw.githubusercontent.com/shunk031/dotfiles/${BRANCH_NAME}/setup.sh"
+          URL="https://raw.githubusercontent.com/jonathanparent/dotfiles/${BRANCH_NAME}/setup.sh"
           echo "Download setup.sh from ${URL}"
 
           printf '${EMAIL_ADDRESS}\n${SYSTEM}\n' | bash -c "$(wget -qO - $URL)"
