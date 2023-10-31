@@ -24,6 +24,6 @@
 {{ if ne (env "CI") "true" -}}
 ".work.d":
   type: "git-repo"
-  url: "git@github.com:shunk031/dotfiles-private.git"
+  url: "git@github.com:jonathanparent/dotfiles-private.git"
   refreshPeriod: "1h"
 {{- end }}
